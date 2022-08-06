@@ -1,0 +1,14 @@
+let task = `task3`;
+console.log(task);
+const a3 = new Array(5, 'two', true, [5, 7, null], 'String',16n, null);
+console.log(a3);
+const a4 = a3.filter(el => (typeof(el) == "object")&&(el) );
+console.log(a4&&a4[0]);
+const a5 = [];
+a4.forEach((el )  => console.log(el));
+a4[0].map((el) => console.log(el));
+a4[0].map(el => el ? a5.push(Math.sqrt(el)) : a5.push(1));
+a4[0].map(el => el ? console.log(Math.sqrt(el)): console.log(1));
+console.log(a5);
+a5.map((el) => console.log(el));
+console.log(`test`);
