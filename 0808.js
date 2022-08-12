@@ -4,9 +4,9 @@ const menu = {
     title: "Menu",
 
 };
-//for (let key in menu) {
-//    alert( "Key: " + key + " value: " + menu[key] );
-//}
+for (let key in menu) {
+   alert( "Key: " + key + " value: " + menu[key] );
+}
 
 Object.keys(menu);
 console.log(Object.keys(menu));
