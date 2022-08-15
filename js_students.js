@@ -59,9 +59,7 @@ students.forEach((el) => {
     });
 });
 console.log('students study the React. We have '+ studentsReact.length + ` students: `);
-studentsReact.forEach((ele) => {
-    console.log(ele);
-});
+studentsReact.forEach((ele) => console.log(ele));
 console.log(`students in the array: ` + studentsReact);
 alert( "Part II. Money!!!");
 console.log(`money: `);
@@ -69,14 +67,42 @@ let allMoney = 0;
 students.forEach((el) => allMoney = allMoney + el.paid);
 console.log(`Money for education of all students are: ` + allMoney + ` UAH `);
 alert( "Part III. Full name!!!");
+let quantity = students.length;
+console.log(`there are ` + students.length + ` students in total`);
 console.log(`firstName + lastName: `);
+let fullName = [];
 students.forEach((el) =>{
+    let fulln = el.f_name + ` ` + el.l_name;
+    fullName.push(fulln);
+});
+console.log('full names of our students: (inline) ' + fullName);
+console.log('full names of our students: (column) ');
+fullName.forEach((el) => console.log(el));
 
-})
-
+let fullName1 = [];
+students.forEach((el) =>{
+    let fulln = el.f_name ;
+    let fullna = el.l_name;
+    fullName1.push(fulln, fullna);
+});
+console.log('full names of our students: ' + fullName1);
+console.log(fullName1);
+alert( "Part IV. algoritms+!!!");
 
 console.log(`algoritms+: `);
+let oldStudents = students.filter(el => (el.age > 25));
+console.log(oldStudents);
+oldStudents.forEach((el) => {
+    el.courses.push(`Algoritms`);
+    console.log(el.f_name, el.courses)
 
+});
+console.log(`Course 'Algorims' is recommended for students: `);
+oldStudents.forEach((el) => {
+    el.courses.push(`Algoritms`);
+    console.log(el.f_name + ` ` + el.l_name);
+
+});
 console.log(`branding -: `);
 
 console.log(`score: `);
