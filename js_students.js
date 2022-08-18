@@ -87,8 +87,8 @@ students.forEach((el) =>{
 });
 console.log('full names of our students: ' + fullName1);
 console.log(fullName1);
-alert( "Part IV. algoritms+!!!");
 
+alert( "Part IV. algoritms+!!!");
 console.log(`algoritms+: `);
 let oldStudents = students.filter(el => (el.age > 25));
 console.log(oldStudents);
@@ -99,13 +99,37 @@ oldStudents.forEach((el) => {
 });
 console.log(`Course 'Algorims' is recommended for students: `);
 oldStudents.forEach((el) => {
-    el.courses.push(`Algoritms`);
     console.log(el.f_name + ` ` + el.l_name);
-
 });
+students.forEach((el) => {
+      console.log(el.f_name, el.courses);
+});
+
+
+alert( "Part V. branding -");
 console.log(`branding -: `);
+let optim = students.filter((el) => {
+    return el.courses.length > 3});
+let optimL = optim.length;//змінна - кількість студентів з більш ніж 3 курсами
+console.log(optimL + ` students have > 3 courses`);
+
+students.forEach((el) => {
+    console.log(el.f_name, el.courses);
+});
+optim.forEach((el) => {
+    console.log(el.f_name, el.courses);
+    let opti =el.courses;
+    opti = opti.filter((n)  => {return n != 'Branding' })
+    el.courses = opti;
+    console.log(el.f_name, el.courses);
+});
+
+students.forEach((el) => {
+    console.log(el.f_name, el.courses);
+});
+
+
 
 console.log(`score: `);
 
 console.log(`mySelf: `);
-

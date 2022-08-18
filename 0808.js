@@ -23,6 +23,10 @@ console.log(menu.hasOwnProperty('dd'));
 menu.hasOwnProperty('title');
 console.log(menu.hasOwnProperty('title'));
 
+let numbers = [1,2,3,4];
+numbers = numbers.filter((n) => {return n != 3});
+console.log(numbers); // [1,2,4]
+
 
 
 const person = {
