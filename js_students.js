@@ -129,7 +129,20 @@ students.forEach((el) => {
 });
 
 
-
+alert( "Part VI. score");
 console.log(`score: `);
+let score1 = 0;
+students.forEach((el) => {
+    el.score = 0;
+    pupils.forEach((ele) =>{
+        if (ele.name === el.f_name){
+            //el.score = ele.score;
+            score1 = ele.score;
+            el.score = score1;
+        }
+
+    });
+    console.log(el.f_name, el.score);
+});
 
 console.log(`mySelf: `);
