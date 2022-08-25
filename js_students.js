@@ -47,6 +47,20 @@ const students = [
         'courses': ['Git', 'React', 'Branding']
     }
 ];
+const user =  {
+    'id': 4,
+    'f_name': 'Zack',
+    'l_name': 'F',
+    'gender': 'M',
+    'married': true,
+    'age': 45,
+    'paid': 250,
+    'courses': ['Git', 'React', 'Branding'],
+    'mySelf' : function(){
+        console.log(`Hello! I am ` + this.f_name + ` ` + this.l_name + `! I have ` + this.age + ` years old. And I love JavaScript!`)
+    }
+}
+
 alert("Part I. React!!!");
 console.log(`react: `);
 let studentsReact = [];
@@ -144,5 +158,7 @@ students.forEach((el) => {
     });
     console.log(el.f_name, el.score);
 });
-
+console.log(students);
+alert( "Part VII. mySelf");
 console.log(`mySelf: `);
+user.mySelf();
